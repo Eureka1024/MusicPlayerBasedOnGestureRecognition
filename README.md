@@ -35,6 +35,13 @@
 - S3 -- PF0
 - S4 -- PA2
 
+使用按键软件包：multibutton 
+
+- [RT-Thread multibutton软件包地址](http://packages.rt-thread.org/detail.html?package=MultiButton)
+- [RT-Thread multibutton软件包 github 地址](https://github.com/liu2guang/MultiButton#readme)
+
+- [MultiButton作者0x1abin github地址](https://github.com/0x1abin/MultiButton) 
+
 
 
 - OLED12864 模块（IIC 协议）
