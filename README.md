@@ -27,7 +27,7 @@
 
 ## 二、模块使用与配置
 
-### 2.1、按键模块
+### 2.1、按键模块（GPIO）
 
 按键模块使用如下 GPIO 引脚：
 
@@ -55,14 +55,17 @@
 
 
 
-- SD 卡模块（SDIO协议）
+### 2.3、SD 卡模块（SDIO协议）
 
-  - SD_CMD -- PB0
+- SD_CMD -- PB0
 
-  - SD_CLK -- PB1
+- SD_CLK -- PB1
 
-  - SD_DAT -- PB2
+- SD_DAT -- PB2
 
-  - SD_DET -- PE5
+- SD_DET -- PE5
 
-  
+使用到 RT-Thread 提供的 SDIO 驱动，使用到的组件和服务层有 DFS、Fatfs 和 POSIX。
+
+
+
