@@ -31,9 +31,9 @@
 
 按键模块使用如下 GPIO 引脚：
 
-- S2 -- PF1
-- S3 -- PF0
-- S4 -- PA2
+- S2 -- PF1 （单击为向下选择）
+- S3 -- PF0（单击为确定，双击为返回）
+- S4 -- PA2（单击为向上选择）
 
 使用按键软件包：multibutton 
 
@@ -41,8 +41,6 @@
 - [RT-Thread multibutton软件包 github 地址](https://github.com/liu2guang/MultiButton#readme)
 
 - [MultiButton作者0x1abin github地址](https://github.com/0x1abin/MultiButton) 
-
-
 
 ### 2.2、OLED12864 模块（IIC 协议）
 
