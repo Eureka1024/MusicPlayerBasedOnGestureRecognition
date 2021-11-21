@@ -13,4 +13,13 @@
 #include "oled12864.h"
 #include "oled12864_font.h"
 
+/* 外部控制事件标志 */
+#define UP_FLAG     (1 << 0)    //向上
+#define ENTRY_FLAG  (1 << 1)    //确定
+#define RETURN_FLAG (1 << 2)    //返回
+#define DOWN_FLAG   (1 << 3)    //向下
+
+extern struct rt_event control_event; //功能控制事件
+
+
 #endif /* APPLICATIONS_COMMON_H_ */
