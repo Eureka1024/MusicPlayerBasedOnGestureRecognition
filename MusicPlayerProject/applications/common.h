@@ -10,6 +10,7 @@
 #ifndef APPLICATIONS_COMMON_H_
 #define APPLICATIONS_COMMON_H_
 
-
+#include "oled12864.h"
+#include "oled12864_font.h"
 
 #endif /* APPLICATIONS_COMMON_H_ */

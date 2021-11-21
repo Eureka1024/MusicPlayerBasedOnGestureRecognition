@@ -1,21 +1,16 @@
 /*
- * Copyright (c) 2020-2021, Bluetrum Development Team
+ * Copyright (c) 2021, Eureka1024 <eureka1024@qq.com>
  *
  * SPDX-License-Identifier: Apache-2.0
  *
  * Change Logs:
- * Date           Author       Notes
- * 2020/12/10     greedyhao    The first version
- */
-
-/**
- * Notice!
- * All functions or data that are called during an interrupt need to be in RAM.
- * You can do it the way exception_isr() does.
+ * Date           Author        Notes
+ * 2021-11-21     Eureka1024    the first version
  */
 
 #include <rtthread.h>
 #include "board.h"
+#include "common.h"
 
 int main(void)
 {
