@@ -18,7 +18,8 @@ int main(void)
 
     rt_pin_mode(pin, PIN_MODE_OUTPUT);
     rt_kprintf("Hello, world\n");
-
+    rt_thread_mdelay(1000);
+    music_num_get();
     while (1)
     {
         rt_pin_write(pin, PIN_LOW);

@@ -21,5 +21,6 @@
 
 extern struct rt_event control_event; //功能控制事件
 
+int music_num_get(void);
 
 #endif /* APPLICATIONS_COMMON_H_ */
