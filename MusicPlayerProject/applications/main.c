@@ -17,7 +17,6 @@ int main(void)
     uint8_t pin = rt_pin_get("PE.1");
 
     rt_pin_mode(pin, PIN_MODE_OUTPUT);
-    rt_kprintf("Hello, world\n");
 
     while (1)
     {

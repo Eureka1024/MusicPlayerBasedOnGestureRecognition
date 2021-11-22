@@ -157,7 +157,6 @@ int menuGUI_thread_init(void)
     if (menu_tid != RT_NULL)
         rt_thread_startup(menu_tid);
 
-//    wavplayer_volume_set(3); //初始化音量
     return RT_EOK;
 }
 INIT_APP_EXPORT(menuGUI_thread_init);
@@ -265,7 +264,7 @@ void playlists(int8_t* state_addr)
 
 void settings_list(int8_t* state_addr)
 {
-    int8_t i=0,k=2;
+    int8_t i=0, k=2;
     if(*state_addr < 0)  *state_addr = 1;
     if(*state_addr >= 3)  *state_addr = 0;
     OLED_Clear();
@@ -297,7 +296,6 @@ void music_play(int8_t* state_addr)
         rt_kprintf("play : %s\n",current_music_file_path);
 
         wavplayer_play(current_music_file_path); //播放
-        rt_kprintf("volume = %d\n",wavplayer_volume_get());
     }
 
     //返回上一个状态
@@ -312,7 +310,7 @@ void volume_control(int8_t* state_addr)
     if(*state_addr < 0)   *state_addr = 0;
 
     wavplayer_volume_set(*state_addr*5);
-    rt_kprintf("volume = %d\n",wavplayer_volume_get());
+    rt_kprintf("volume = %d\n", wavplayer_volume_get());
     OLED_Clear();
     OLED_ShowNum(30,0,*state_addr*10,2,16);
 }

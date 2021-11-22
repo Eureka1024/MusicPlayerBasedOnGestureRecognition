@@ -45,7 +45,6 @@ static void button_0_callback(void *btn)
     switch(btn_event_val)
     {
         case SINGLE_CLICK:
-            rt_kprintf("up\n");
             rt_event_send(&control_event, UP_FLAG); //向上选择
             break;
 
@@ -63,12 +62,10 @@ static void button_1_callback(void *btn)//entry
     switch(btn_event_val)
     {
         case SINGLE_CLICK:
-            rt_kprintf("middle\n");
             rt_event_send(&control_event, ENTRY_FLAG); //确定
             break;
 
         case DOUBLE_CLICK:
-            rt_kprintf("2middle\n");
             rt_event_send(&control_event, RETURN_FLAG);//返回
             break;
 
@@ -87,7 +84,6 @@ static void button_2_callback(void *btn)//next
     switch(btn_event_val)
     {
         case SINGLE_CLICK:
-            rt_kprintf("down\n");
             rt_event_send(&control_event, DOWN_FLAG);//向下
             break;
 

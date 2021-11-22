@@ -120,6 +120,10 @@
 #define RT_MMCSD_STACK_SIZE 1024
 #define RT_MMCSD_THREAD_PREORITY 22
 #define RT_MMCSD_MAX_PARTITION 16
+#define RT_USING_AUDIO
+#define RT_AUDIO_REPLAY_MP_BLOCK_SIZE 4096
+#define RT_AUDIO_REPLAY_MP_BLOCK_COUNT 2
+#define RT_AUDIO_RECORD_PIPE_SIZE 2048
 
 /* Using USB */
 
@@ -196,6 +200,10 @@
 /* LVGL: powerful and easy-to-use embedded GUI library */
 
 /* end of LVGL: powerful and easy-to-use embedded GUI library */
+#define PKG_USING_WAVPLAYER
+#define PKG_WP_USING_PLAY
+#define PKG_WP_PLAY_DEVICE "sound0"
+#define PKG_USING_WAVPLAYER_LATEST_VERSION
 
 /* u8g2: a monochrome graphic library */
 
@@ -235,6 +243,8 @@
 /* entertainment: terminal games and other interesting software packages */
 
 /* end of entertainment: terminal games and other interesting software packages */
+#define PKG_USING_OPTPARSE
+#define PKG_USING_OPTPARSE_LATEST_VERSION
 #define PKG_USING_MULTIBUTTON
 #define PKG_USING_MULTIBUTTON_V110
 
@@ -248,6 +258,8 @@
 
 /* Onboard Peripheral Drivers */
 
+#define BSP_USING_AUDIO
+#define BSP_USING_AUDIO_PLAY
 #define BSP_USING_SDCARD
 /* end of Onboard Peripheral Drivers */
 

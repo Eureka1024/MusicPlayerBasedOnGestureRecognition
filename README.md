@@ -55,15 +55,22 @@
 
 ### 2.3、SD 卡模块（SDIO协议）
 
+使用的 SDIO 协议对应的引脚如下：
+
 - SD_CMD -- PB0
-
 - SD_CLK -- PB1
-
 - SD_DAT -- PB2
-
 - SD_DET -- PE5
 
 使用到 RT-Thread 提供的 SDIO 驱动，使用到的组件和服务层有 DFS、Fatfs 和 POSIX。
 
 
 
+### 2.4、AUDIO 模块
+
+- VOUTRP -- DACR
+- VOUTLP -- DACL
+- FMANT -- FM_ANT
+- MICIN -- MICL/PF2
+
+使用到的驱动 audio device， 软件包为 wavplayer（需要optparse软件包），可以用来播放 wav 格式的音乐文件。

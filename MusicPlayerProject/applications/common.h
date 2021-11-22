@@ -11,6 +11,8 @@
 #define APPLICATIONS_COMMON_H_
 
 #include <dfs_posix.h> //文件操作
+#include <wavplayer.h>
+
 #include "oled12864.h"
 #include "oled12864_font.h"
 
