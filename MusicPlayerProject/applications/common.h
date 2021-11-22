@@ -10,6 +10,7 @@
 #ifndef APPLICATIONS_COMMON_H_
 #define APPLICATIONS_COMMON_H_
 
+#include <dfs_posix.h> //文件操作
 #include "oled12864.h"
 #include "oled12864_font.h"
 
@@ -21,6 +22,11 @@
 
 extern struct rt_event control_event; //功能控制事件
 
-int music_num_get(void);
+//歌曲信息
+struct SONG_INFO
+{
+    uint8_t songs_num;          //所有的歌曲数量
+    char music_table[3][20];    //用于存储歌曲的名字
+};
 
 #endif /* APPLICATIONS_COMMON_H_ */

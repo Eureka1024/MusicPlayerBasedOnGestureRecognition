@@ -14,5 +14,6 @@
 extern const unsigned char music_bmp[];
 extern const unsigned char F8X16[];
 extern const char Hzk[][32];
-
+extern const unsigned char loading_bmp[];
+extern const unsigned char setting_bmp[];
 #endif /* APPLICATIONS_OLED12864_FONT_H_ */
