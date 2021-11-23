@@ -12,6 +12,7 @@
 
 #include <dfs_posix.h> //文件操作
 #include <wavplayer.h>
+#include "paj7620.h"
 
 #include "oled12864.h"
 #include "oled12864_font.h"
@@ -30,5 +31,7 @@ struct SONG_INFO
     uint8_t songs_num;          //所有的歌曲数量
     char music_table[3][20];    //用于存储歌曲的名字
 };
+
+extern struct SONG_INFO song_info; //存放歌曲信息
 
 #endif /* APPLICATIONS_COMMON_H_ */

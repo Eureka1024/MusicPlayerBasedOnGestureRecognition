@@ -17,9 +17,12 @@
 #include <dfs_posix.h>
 #include "drv_gpio.h"
 
+#include "common.h"
 // #define DRV_DEBUG
 #define DBG_TAG "app.card"
 #include <rtdbg.h>
+
+int music_num_get(void);
 
 void sd_mount(void *parameter)
 {
@@ -31,6 +34,7 @@ void sd_mount(void *parameter)
             if (dfs_mount("sd0", "/", "elm", 0, 0) == RT_EOK)
             {
                 LOG_I("sd card mount to '/'");
+                song_info.songs_num = music_num_get();
                 break;
             }
             else
@@ -46,7 +50,7 @@ int ab32_sdcard_mount(void)
     rt_thread_t tid;
 
     tid = rt_thread_create("sd_mount", sd_mount, RT_NULL,
-                           1024, RT_THREAD_PRIORITY_MAX - 2, 20);
+                           2048, RT_THREAD_PRIORITY_MAX - 2, 20);
     if (tid != RT_NULL)
     {
         rt_thread_startup(tid);
