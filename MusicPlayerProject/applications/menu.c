@@ -309,7 +309,7 @@ void volume_control(int8_t* state_addr)
     if(*state_addr > 9) *state_addr = 9;
     if(*state_addr < 0)   *state_addr = 0;
 
-    wavplayer_volume_set(*state_addr*5);
+    wavplayer_volume_set(*state_addr *10);
     rt_kprintf("volume = %d\n", wavplayer_volume_get());
     OLED_Clear();
     OLED_ShowNum(30,0,*state_addr*10,2,16);

@@ -43,18 +43,22 @@ static void paj7620_entry(void *parameter)
                 {
                 case PAJ7620_GESTURE_RIGHT:
                     rt_event_send(&control_event, ENTRY_FLAG);
+                    rt_thread_mdelay(1000);
                     break;
 
                 case PAJ7620_GESTURE_LEFT:
                     rt_event_send(&control_event, RETURN_FLAG);
+                    rt_thread_mdelay(1000);
                     break;
 
                 case PAJ7620_GESTURE_UP:
                     rt_event_send(&control_event, UP_FLAG);
+                    rt_thread_mdelay(1000);
                     break;
 
                 case PAJ7620_GESTURE_DOWN:
                     rt_event_send(&control_event, DOWN_FLAG);
+                    rt_thread_mdelay(1000);
                     break;
 
                 case PAJ7620_GESTURE_FORWARD:
