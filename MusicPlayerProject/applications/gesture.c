@@ -30,7 +30,9 @@ char *gesture_string1[] =
  */
 static void paj7620_entry(void *parameter)
 {
+
     paj7620_gesture_t gesture;
+    paj7620_gesture_t last_gesture = PAJ7620_GESTURE_NONE;
     rt_thread_mdelay(5000);
     while (1)
     {
@@ -43,12 +45,10 @@ static void paj7620_entry(void *parameter)
                 {
                 case PAJ7620_GESTURE_RIGHT:
                     rt_event_send(&control_event, ENTRY_FLAG);
-                    rt_thread_mdelay(1000);
                     break;
 
                 case PAJ7620_GESTURE_LEFT:
                     rt_event_send(&control_event, RETURN_FLAG);
-                    rt_thread_mdelay(1000);
                     break;
 
                 case PAJ7620_GESTURE_UP:
@@ -57,12 +57,14 @@ static void paj7620_entry(void *parameter)
                     break;
 
                 case PAJ7620_GESTURE_DOWN:
+
                     rt_event_send(&control_event, DOWN_FLAG);
                     rt_thread_mdelay(1000);
                     break;
 
                 case PAJ7620_GESTURE_FORWARD:
-
+                    last_gesture = PAJ7620_GESTURE_FORWARD;
+                    rt_thread_mdelay(1000);
                     break;
 
                 case PAJ7620_GESTURE_BACKWARD:

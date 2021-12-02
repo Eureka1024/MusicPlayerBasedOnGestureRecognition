@@ -14,15 +14,10 @@
 
 int main(void)
 {
-    uint8_t pin = rt_pin_get("PE.1");
-
-    rt_pin_mode(pin, PIN_MODE_OUTPUT);
-
     while (1)
     {
-        rt_pin_write(pin, PIN_LOW);
         rt_thread_mdelay(500);
-        rt_pin_write(pin, PIN_HIGH);
         rt_thread_mdelay(500);
     }
+
 }
